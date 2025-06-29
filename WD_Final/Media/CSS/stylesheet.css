@@ -1,0 +1,36 @@
+@font-face {
+    font-family: 'Akira Expanded';
+    src: url('AkiraExpanded-SuperBold.woff2') format('woff2'),
+        url('AkiraExpanded-SuperBold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'barcode font';
+    src: url('barcodefont.woff2') format('woff2'),
+        url('barcodefont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'ElroNet Monospace';
+    src: url('ElroNet-Monospace.woff2') format('woff2'),
+        url('ElroNet-Monospace.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Stretch Pro';
+    src: url('StretchProRegular.woff2') format('woff2'),
+        url('StretchProRegular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
