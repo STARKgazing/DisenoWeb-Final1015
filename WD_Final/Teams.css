@@ -1,0 +1,316 @@
+/*BASE CSS*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+
+:root {
+    --black: #000000;
+    --darkgrey: #121212;
+    --darkblue: #08132e;
+    --accentblue: #122345;
+    --lightlue: #668AD2;
+    --texts: #ffffff;
+    --footergrey1: #1E1E1E;
+    --footergrey2: #2B2B2B;
+    --footergrey3: #3C3C3C;
+}
+
+@font-face {
+    font-family: 'MainTitle';
+    src: url('/WD_Final/Media/CSS/AkiraExpanded-SuperBold.woff2')format(woff2);
+}
+@font-face {
+    font-family: 'DetailTitle';
+    src: url('/WD_Final/Media/CSS/StretchProRegular.woff2')format(woff2);
+}
+@font-face {
+    font-family: 'Texts';
+    src: url('/WD_Final/Media/CSS/ElroNet-Monospace.woff2')format(woff2);
+}
+@font-face {
+    font-family: 'Barcode';
+    src: url('/WD_Final/Media/CSS/barcodefont.woff2')format(woff2);
+}
+
+.barcode {
+    font-family: 'Barcode';
+    text-align: left;
+    display: block;
+    font-size: 120px;
+}
+
+body {
+    background-color: var(--black);
+    color: var(--texts);
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    padding: 1rem;
+}
+
+nav {
+    background-color: var(--darkblue);
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+header, footer {
+    background-color: var(--darkgrey);
+    color:#ffffff;
+}
+
+footer {
+    padding: 0.5rem;
+}
+
+h3 {
+    font-family: 'MainTitle';
+}
+
+h1 {
+    font-family: 'DetailTitle';
+}
+
+h4, p, table, ul {
+    font-family: 'Texts';
+}
+
+/*INDEX LAYOUT*/
+
+/*HEADER*/
+
+.Logos-and-Buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+.Header-Logos {
+    display: flex;
+    gap: 1rem;
+}
+
+.Logo-F1 img {
+    width: 100px;
+    height: auto;
+    object-fit: contain;
+}
+
+.Logo-FIA img {
+    width: 40px;
+    height: auto;
+    object-fit: contain;
+}
+
+.Header-Buttons {
+    display: flex;
+    gap: 1rem;
+
+}
+
+.Buttons {
+    background-color: var(--accentblue);
+    border-radius: 8px;
+    padding: 1rem;
+}
+
+/*NAV*/
+
+.Navigation {
+    padding-left: 1rem;
+    display: flex;
+    gap: 2rem;
+}
+
+.Nav-Buttons h3 {
+    color: var(--lightlue);
+}
+
+/*DRIVER CARDS*/
+
+.Team-Card {
+    position: relative;
+    background-color: #08132e;
+    border-radius: 1rem;
+    margin: 5rem 0;
+    padding: 4rem 1rem 1rem 1rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.Livery-Image {
+    position: absolute;
+    top: -80px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40%;
+    max-width: 800px;
+    z-index: 2;
+}
+
+.Team-Content {
+    display: flex;
+    justify-content: space-between;
+    gap: 15rem;
+}
+
+.Team-Left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.Team-Logo {
+    width: 40px;
+    height: auto;
+}
+
+.Team-Barcode {
+    font-family: 'Barcode';
+    font-size: 6rem;
+    color: #ffffff;
+    letter-spacing: 0.2rem;
+}
+
+.Team-Left ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.Team-Left ul li {
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+}
+
+.Team-Right {
+    flex: 2;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.Driver {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2rem;
+}
+
+.Driver h3 {
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+}
+
+.Driver-Image {
+    width: auto;
+    height: 500px;
+    object-fit: cover;
+    object-position: top;
+    border-radius: 0.5rem;
+}
+
+/*FOOTER*/  
+
+.Sponsor-Title {
+    margin: 1rem;
+}
+
+.Sponsor-Frame-1 {
+    background-color: var(--footergrey1);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    align-items: center;
+    gap: 3rem;
+    padding: 1rem;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.Sponsor-Frame-1 img {
+    align-content: center;
+    max-width: 100px;
+    height: auto;
+}
+
+.Sponsor-Frame-2 {
+    background-color: var(--footergrey2);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    align-items: center;
+    gap: 3rem;
+    padding: 1rem;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.Sponsor-Frame-2 img {
+    align-content: center;
+    max-width: 100px;
+    height: auto;
+}
+
+.Sponsor-Frame-3 {
+    background-color: var(--footergrey3);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    align-items: center;
+    gap: 3rem;
+    padding: 1rem;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.Sponsor-Frame-3 img {
+    align-content: center;
+    max-width: 100px;
+    height: auto;
+}
+
+.Download-Stuff {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+.Download-Logos img{
+    gap: 1rem;
+    width: 150px;
+    height: auto;
+}
+
+.Follows {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+.Follow-Logos {
+    background-color: var();
+}
+
+.Follow-Logos img {
+    gap: 1rem;
+    width: 20px;
+    height: auto;
+}
+
+.Final-Credits {
+    padding: 1rem;
+}

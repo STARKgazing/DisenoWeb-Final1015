@@ -1,0 +1,337 @@
+/*BASE CSS*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+
+:root {
+    --black: #000000;
+    --darkgrey: #121212;
+    --darkblue: #08132e;
+    --accentblue: #122345;
+    --lightlue: #668AD2;
+    --texts: #ffffff;
+    --footergrey1: #1E1E1E;
+    --footergrey2: #2B2B2B;
+    --footergrey3: #3C3C3C;
+}
+
+@font-face {
+    font-family: 'MainTitle';
+    src: url('/WD_Final/Media/CSS/AkiraExpanded-SuperBold.woff2')format(woff2);
+}
+@font-face {
+    font-family: 'DetailTitle';
+    src: url('/WD_Final/Media/CSS/StretchProRegular.woff2')format(woff2);
+}
+@font-face {
+    font-family: 'Texts';
+    src: url('/WD_Final/Media/CSS/ElroNet-Monospace.woff2')format(woff2);
+}
+@font-face {
+    font-family: 'Barcode';
+    src: url('/WD_Final/Media/CSS/barcodefont.woff2')format(woff2);
+}
+
+.barcode {
+    font-family: 'Barcode';
+    text-align: left;
+    display: block;
+    font-size: 120px;
+}
+
+body {
+    background-color: var(--black);
+    color: var(--texts);
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    padding: 1rem;
+}
+
+nav {
+    background-color: var(--darkblue);
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+header, footer {
+    background-color: var(--darkgrey);
+    color:#ffffff;
+}
+
+footer {
+    padding: 0.5rem;
+}
+
+h3 {
+    font-family: 'MainTitle';
+}
+
+h1 {
+    font-family: 'DetailTitle';
+}
+
+h4, p, table, ul {
+    font-family: 'Texts';
+}
+
+/*INDEX LAYOUT*/
+
+/*HEADER*/
+
+.Logos-and-Buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+.Header-Logos {
+    display: flex;
+    gap: 1rem;
+}
+
+.Logo-F1 img {
+    width: 100px;
+    height: auto;
+    object-fit: contain;
+}
+
+.Logo-FIA img {
+    width: 40px;
+    height: auto;
+    object-fit: contain;
+}
+
+.Header-Buttons {
+    display: flex;
+    gap: 1rem;
+
+}
+
+.Buttons {
+    background-color: var(--accentblue);
+    border-radius: 8px;
+    padding: 1rem;
+}
+
+/*NAV*/
+
+.Navigation {
+    padding-left: 1rem;
+    display: flex;
+    gap: 2rem;
+}
+
+.Nav-Buttons h3 {
+    color: var(--lightlue);
+}
+
+/*MAIN*/
+
+.F1-TheMovie {
+    background-image: url(/WD_Final/Media/F1_Movie/F1Movie_Header.jpg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 15px;
+    margin: auto;
+    height: 600px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+.F1-TheMovie::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 1;
+}
+
+.F1-TheMovie h1 {
+    position:relative;
+    z-index: 2;
+    color: #ffffff;
+    text-align: center;
+}
+
+.F1-TheMovie h3 {
+    position:relative;
+    z-index: 2;
+    color: #ffffff;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.F1-TheMovie {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.F1Movie-News {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.News {
+    background-color: var(--accentblue);
+    border-radius: 0.5rem;
+    padding: 1rem;
+    width: 520px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.News img {
+    width: 100%;
+    height: auto;
+    border-radius: 0.3rem;
+}
+
+.News h3, p {
+    color: #ffffff;
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.Trailer-Title {
+    margin: 1rem;
+}
+
+.F1Movie-Trailers {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.Trailer {
+    background-color: var(--accentblue);
+    border-radius: 0.5rem;
+    padding: 1rem;
+    width: 520px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.Trailer-vid {
+    width: 100%;
+    height: auto;
+    border-radius: 0.3rem;
+}
+
+.Trailer h3 {
+    color: #ffffff;
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+}
+
+/*FOOTER*/  
+
+.Sponsor-Title {
+    margin: 1rem;
+}
+
+.Sponsor-Frame-1 {
+    background-color: var(--footergrey1);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    align-items: center;
+    gap: 3rem;
+    padding: 1rem;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.Sponsor-Frame-1 img {
+    align-content: center;
+    max-width: 100px;
+    height: auto;
+}
+
+.Sponsor-Frame-2 {
+    background-color: var(--footergrey2);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    align-items: center;
+    gap: 3rem;
+    padding: 1rem;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.Sponsor-Frame-2 img {
+    align-content: center;
+    max-width: 100px;
+    height: auto;
+}
+
+.Sponsor-Frame-3 {
+    background-color: var(--footergrey3);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    align-items: center;
+    gap: 3rem;
+    padding: 1rem;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.Sponsor-Frame-3 img {
+    align-content: center;
+    max-width: 100px;
+    height: auto;
+}
+
+.Download-Stuff {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+.Download-Logos img{
+    gap: 1rem;
+    width: 150px;
+    height: auto;
+}
+
+.Follows {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+.Follow-Logos {
+    background-color: var();
+}
+
+.Follow-Logos img {
+    gap: 1rem;
+    width: 20px;
+    height: auto;
+}
+
+.Final-Credits {
+    padding: 1rem;
+}
